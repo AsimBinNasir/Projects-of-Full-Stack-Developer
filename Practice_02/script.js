@@ -19,7 +19,7 @@ updateWinsLosses();
 // Function to check the user's guess
 function checkGuess(guess, button) {
   if (guess === randomNumber) {
-    result.textContent = `🎉 Congratulations! You guessed the correct number: ${randomNumber}.`;
+    result.textContent = `Congratulations! You guessed the correct number: ${randomNumber}.`;
     result.style.color = 'green';
     wins++;
     localStorage.setItem('wins', wins); // Update localStorage
@@ -36,7 +36,7 @@ function checkGuess(guess, button) {
     button.style.cursor = 'not-allowed';
 
     if (chancesLeft === 0) {
-      result.textContent = `😢 Game over! The correct number was ${randomNumber}.`;
+      result.textContent = `Game over! The correct number was ${randomNumber}.`;
       result.style.color = 'red';
       losses++;
       localStorage.setItem('losses', losses); // Update localStorage
@@ -44,7 +44,7 @@ function checkGuess(guess, button) {
       updateWinsLosses();
       setTimeout(reloadGame, 0); // Delay the reload logic
     } else {
-      result.textContent = `❌ Wrong guess! Try again.`;
+      result.textContent = `Wrong guess! Try again.`;
       result.style.color = 'red';
     }
   }
