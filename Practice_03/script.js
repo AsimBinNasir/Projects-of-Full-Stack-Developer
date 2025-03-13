@@ -1,4 +1,3 @@
-console.log(foodProducts)
 let foodProductsHTML = '';
 
 // Generate HTML for each food product
@@ -33,7 +32,8 @@ foodProducts.forEach((foodProduct) => {
       </div>
 
       <div class="add-to-cart">
-        <button class="add-to-cart-button">
+        <button class="add-to-cart-button js-add-to-cart-button"
+        data-food-product-name="${foodProduct.name}">
           Add to Cart
         </button>
       </div>
@@ -44,7 +44,32 @@ foodProducts.forEach((foodProduct) => {
 // Insert the generated HTML into the food grid
 document.querySelector('.js-food-grid').innerHTML = foodProductsHTML;
 
+document.querySelectorAll('.js-add-to-cart-button')
+  .forEach((button) => {
+    button.addEventListener('click', () => {
+      const foodProductName = button.dataset.foodProductName;
 
+      let matchingItem;
+
+      cart.forEach((item) => {
+        if(foodProductName === item.foodProductName) {
+          matchingItem = item;
+        }
+      });
+
+      if (matchingItem) {
+        matchingItem.quantity += 1;
+      } else {
+        cart.push({
+          foodProductName: foodProductName,
+          quantity: 1
+        });
+      }
+
+      
+      console.log(cart)
+    });
+  });
 
 
 
