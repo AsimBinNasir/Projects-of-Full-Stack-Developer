@@ -17,7 +17,7 @@ foodProducts.forEach((foodProduct) => {
       </div>
 
       <div class="food-quantity">
-        <select class="quantity">
+        <select class="quantity" id="select-quantity">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -44,9 +44,16 @@ foodProducts.forEach((foodProduct) => {
 // Insert the generated HTML into the food grid
 document.querySelector('.js-food-grid').innerHTML = foodProductsHTML;
 
+
+
 document.querySelectorAll('.js-add-to-cart-button')
   .forEach((button) => {
+  
+
     button.addEventListener('click', () => {
+      const selectQuantity = button.closest('.food-container').querySelector('.quantity');
+      const quantity = Number(selectQuantity.value);
+
       const foodProductName = button.dataset.foodProductName;
 
       let matchingItem;
@@ -58,11 +65,11 @@ document.querySelectorAll('.js-add-to-cart-button')
       });
 
       if (matchingItem) {
-        matchingItem.quantity += 1;
+        matchingItem.quantity += quantity;
       } else {
         cart.push({
           foodProductName: foodProductName,
-          quantity: 1
+          quantity: quantity
         });
       }
 
