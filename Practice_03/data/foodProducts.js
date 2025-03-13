@@ -1,3 +1,4 @@
+// Array of food products
 const foodProducts = [
   {
     image: "images/Sushi.jpg",
@@ -49,5 +50,4 @@ const foodProducts = [
     name: "Chicken Biryani",
     price: 350.00
   }
-
 ];
