@@ -1,28 +1,6 @@
 // script.js
-const foodProducts = [
-  {
-    image: "images/Sushi.jpg",
-    name: "Sushi",
-    price: 470.00
-  },
-  {
-    image: "images/Classic Beef Tacos.webp",
-    name: "Classic Beef Tacos",
-    price: 250.00
-  },
-  {
-    image: "images/Spaghetti Carbonara.jpg",
-    name: "Spaghetti Carbonara",
-    price: 350.00
-  },
-  {
-    image: "images/Pad Thai.jpg",
-    name: "Pad Thai",
-    price: 550.00
-  }
-];
 
-let foodProductsHTML= '';
+let foodProductsHTML = '';
 
 foodProducts.forEach((foodProducts) => {
   foodProductsHTML += `
@@ -63,7 +41,7 @@ foodProducts.forEach((foodProducts) => {
   `
 })
 
-document.querySelector('.js-food-grid').innerHTML=foodProductsHTML;
+document.querySelector('.js-food-grid').innerHTML = foodProductsHTML;
 
 
 
