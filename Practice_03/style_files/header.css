@@ -1,0 +1,217 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff4500, #ff6347); /* Reddish-orange gradient */
+  color: white;
+}
+
+/* Logo Styles */
+.web-logo .logo {
+  font-size: 24px;
+  margin: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Search Bar Styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px; /* Rounded corners */
+  padding: 8px 15px; /* Increased padding */
+  width: 100%; /* Full width by default */
+  max-width: 500px; /* Maximum width for larger screens */
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  padding: 8px;
+  width: 100%; /* Full width of the container */
+  font-size: 16px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar img {
+  width: 24px; /* Larger search icon */
+  height: 24px;
+}
+
+/* Utility Icons Styles */
+.utility-icons {
+  display: flex;
+  gap: 50px; /* Further increased gap between icons */
+  margin: 15px;
+  align-items: center;
+}
+
+.utility-icons i {
+  font-size: 28px; /* Slightly larger icons */
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.utility-icons i:hover {
+  opacity: 0.8;
+}
+
+/* Specific Icon Colors */
+.contact-icon,
+.wishlist-icon {
+  color: black; /* Black color for contact and wishlist icons */
+}
+
+.cart-icon,
+.hamburger-icon {
+  color: white; /* White color for cart and hamburger icons */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Hide sidebar by default */
+  width: 400px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Shadow on the left side */
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.sidebar-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cart Icon Container */
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Cart Count Styles */
+.cart-count {
+  position: absolute;
+  top: -6px; /* Adjust to position the count */
+  right: -6px; /* Adjust to position the count */
+  background-color: red; /* Background color for the count */
+  color: white; /* Text color for the count */
+  font-size: 12px; /* Font size for the count */
+  padding: 2px 6px; /* Padding for the count */
+  border-radius: 50%; /* Make it circular */
+  font-weight: bold;
+}
+
+/* Close Button Styles */
+.close-sidebar {
+  position: absolute;
+  top: 10px;
+  left: 10px; /* Position on the left corner */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Hide overlay by default */
+  z-index: 999;
+}
+
+/* Show Sidebar and Overlay */
+.sidebar.active {
+  right: 0; /* Show sidebar */
+}
+
+.overlay.active {
+  display: block; /* Show overlay */
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    gap: 10px; /* Add space between stacked items */
+    padding: 10px;
+  }
+
+  .web-logo .logo {
+    font-size: 25px; /* Smaller logo for very small screens */
+    margin: 0;
+  }
+
+  .search-bar {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none; /* Remove max-width restriction */
+    padding: 4px 10px;
+  }
+
+  .utility-icons {
+    gap: 30px; /* Smaller gap for mobile */
+    margin: 0;
+  }
+
+  .utility-icons i {
+    font-size: 25px; /* Smaller icons for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .web-logo .logo {
+    font-size: 25px; /* Smaller logo for very small screens */
+  }
+
+  .search-bar {
+    padding: 4px 10px; /* Smaller padding for very small screens */
+  }
+
+  .search-bar input[type="text"] {
+    font-size: 14px; /* Smaller font size for very small screens */
+  }
+
+  .utility-icons {
+    gap: 30px; /* Even smaller gap for very small screens */
+  }
+
+  .utility-icons i {
+    font-size: 25px; /* Even smaller icons for very small screens */
+  }
+}

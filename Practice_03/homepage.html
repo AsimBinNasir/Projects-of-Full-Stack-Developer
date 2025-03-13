@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style_files/header.css">
+  <link rel="stylesheet" href="style_files/footer.css">
+  <link rel="stylesheet" href="style_files/main.css">
+  <title>FoodBash</title>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="web-logo">
+        <h1 class="logo">FoodBash</h1>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" name="search" id="js-search-bar" placeholder="Search">
+        <button class="search-button">
+          <img src="images/search_icon.png" alt="Search">
+        </button>
+      </div>
+
+      <div class="utility-icons">
+        <i class="contact-icon fas fa-phone-alt"></i> <!-- Contact icon -->
+        <div class="cart-icon-container">
+          <i class="cart-icon fas fa-shopping-cart"></i> <!-- Cart icon -->
+          <span id="cart-count" class="cart-count">0</span> <!-- Cart count -->
+        </div>
+        <i class="wishlist-icon fas fa-heart"></i> <!-- Wishlist icon -->
+        <i id="hamburger-icon" class="hamburger-icon fas fa-bars"></i> <!-- Hamburger menu icon -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <button id="close-sidebar" class="close-sidebar">×</button>
+    <h2 class="sidebar-title">Your Cart</h2>
+    <div id="cart-items" class="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Main Content -->
+  <main>
+    <div class="food-grid js-food-grid">
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <!-- Website Description -->
+      <div class="web-description">
+        <h1 class="logo">FoodBash</h1>
+        <p>
+          FoodBash – Your Ultimate Food Destination! Explore a world of flavors with FoodBash. Discover delicious
+          recipes, save your favorites, and plan your meals effortlessly. From quick snacks to gourmet dishes, find
+          everything you need for your culinary adventures.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Career</a></li>
+        </ul>
+      </div>
+
+      <!-- Information Links -->
+      <div class="information-links">
+        <h2>Information Links</h2>
+        <ul>
+          <li><a href="">How to Order</a></li>
+          <li><a href="">Return Policy</a></li>
+          <li><a href="">Shipment</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="socialmedia-links">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

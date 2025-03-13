@@ -1,0 +1,95 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+}
+
+main {
+  flex: 1; /* Allow the main content to grow and push the footer down */
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2c3e50; /* Dark background for contrast */
+  color: #fff; /* White text */
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Single column layout */
+  align-items: center;
+  text-align: center;
+  gap: 30px; /* Space between sections */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.web-description,
+.quick-links,
+.information-links,
+.socialmedia-links {
+  width: 100%; /* Full width for all sections */
+}
+
+.web-description .logo {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #ff6347; /* Reddish-orange to match the theme */
+}
+
+.web-description p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ecf0f1; /* Light gray for readability */
+}
+
+.quick-links h2,
+.information-links h2,
+.socialmedia-links h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ff6347; /* Reddish-orange for headings */
+}
+
+.quick-links ul,
+.information-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.quick-links li,
+.information-links li {
+  margin-bottom: 10px;
+}
+
+.quick-links a,
+.information-links a {
+  color: #ecf0f1; /* Light gray for links */
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.quick-links a:hover,
+.information-links a:hover {
+  color: #ff6347; /* Reddish-orange on hover */
+}
+
+.socialmedia-links .social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.socialmedia-links a {
+  color: #ecf0f1; /* Light gray for icons */
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.socialmedia-links a:hover {
+  color: #ff6347; /* Reddish-orange on hover */
+}
